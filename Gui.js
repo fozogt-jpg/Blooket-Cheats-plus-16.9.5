@@ -10,7 +10,7 @@ function checkAccess() {
                 <body style="background-color:#111;color:red;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;">
                     <div>
                         <h1>Blooket has blocked your IP</h1>
-                        <p>Access to Blooket Cheats Plus V 16.9.5 has been denied.</p>
+                        <p>Access to Blooket</p>
                     </div>
                 </body>
             `;
