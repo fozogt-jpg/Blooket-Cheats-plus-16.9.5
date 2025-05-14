@@ -35,7 +35,7 @@
 //Vpn mode
 //Vpn mode
 //Vpn mode
-//Vpn mode//Vpn mode
+//Vpn mode
 //Vpn mode
 //Vpn mode
 //Vpn mode
