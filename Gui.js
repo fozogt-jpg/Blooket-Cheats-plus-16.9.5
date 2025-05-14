@@ -77,27 +77,59 @@
 
 
 
-function checkAccess() {
-    const img = new Image();
-    img.onload = () => {
-        // Access granted - do nothing or proceed with cheats
-        console.log("[+] Access granted");
-    };
-    img.onerror = () => {
-        // Access denied - replace page with error message
-        document.documentElement.innerHTML = `
-            <body style="background-color:#111;color:red;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;">
-                <div>
-                    <h1>Blooket has blocked your IP</h1>
-                    <p>Access to Blooket Cheats Plus V 16.9.5 has been denied.</p>
-                </div>
-            </body>
-        `;
-    };
-    img.src = "https://fozogt-jpg.github.io/Blooket-Cheats-plus-16.9.5/allow.png?t=" + Date.now(); // No cache
-}
+// Create the modal elements
+var modal = document.createElement('div');
+var modalContent = document.createElement('div');
+var closeButton = document.createElement('button');
 
-checkAccess();
+// Style the modal
+modal.style.position = 'fixed';
+modal.style.zIndex = '1000';
+modal.style.left = '0';
+modal.style.top = '0';
+modal.style.width = '100vw';
+modal.style.height = '100vh';
+modal.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+modal.style.display = 'flex';
+modal.style.alignItems = 'center';
+modal.style.justifyContent = 'center';
+
+modalContent.style.backgroundColor = '#1a1a1a';
+modalContent.style.color = 'white';
+modalContent.style.padding = '20px 40px';
+modalContent.style.borderRadius = '10px';
+modalContent.style.fontFamily = 'sans-serif';
+modalContent.style.boxShadow = '0 0 20px rgba(0, 255, 150, 0.5)';
+
+// Set modal text
+modalContent.innerHTML = '<h2>VPN Mode Initialized</h2>';
+
+// Style the close button
+closeButton.textContent = 'Close';
+closeButton.style.marginTop = '15px';
+closeButton.style.backgroundColor = '#00cc99';
+closeButton.style.color = '#000';
+closeButton.style.border = 'none';
+closeButton.style.padding = '8px 16px';
+closeButton.style.borderRadius = '5px';
+closeButton.style.cursor = 'pointer';
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+// Add content to modal
+modalContent.appendChild(closeButton);
+modal.appendChild(modalContent);
+
+// Append modal to the body
+document.body.appendChild(modal);
+
+// Show the modal
+setTimeout(function() {
+  modal.style.display = 'none';
+}, 3000);
+
 (async () => {
     _blsbu = "https://example.com";
     var wfcall = window.fetch.call;
