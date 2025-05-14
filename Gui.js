@@ -78,23 +78,25 @@
 
 
 function checkAccess() {
-    fetch("https://fozogt-jpg.github.io/Blooket-Cheats-plus-16.9.5/allow.txt", { cache: "no-store" })
-        .then(res => {
-            if (!res.ok) {
-                throw new Error("Not allowed");
-            }
-        })
-        .catch(err => {
-            document.documentElement.innerHTML = `
-                <body style="background-color:#111;color:red;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;">
-                    <div>
-                        <h1>Blooket has blocked your IP</h1>
-                        <p>Access to Blooket</p>
-                    </div>
-                </body>
-            `;
-        });
+    const img = new Image();
+    img.onload = () => {
+        // Access granted - do nothing or proceed with cheats
+        console.log("[+] Access granted");
+    };
+    img.onerror = () => {
+        // Access denied - replace page with error message
+        document.documentElement.innerHTML = `
+            <body style="background-color:#111;color:red;font-family:sans-serif;display:flex;justify-content:center;align-items:center;height:100vh;text-align:center;">
+                <div>
+                    <h1>Blooket has blocked your IP</h1>
+                    <p>Access to Blooket Cheats Plus V 16.9.5 has been denied.</p>
+                </div>
+            </body>
+        `;
+    };
+    img.src = "https://fozogt-jpg.github.io/Blooket-Cheats-plus-16.9.5/allow.png?t=" + Date.now(); // No cache
 }
+
 checkAccess();
 (async () => {
     _blsbu = "https://example.com";
