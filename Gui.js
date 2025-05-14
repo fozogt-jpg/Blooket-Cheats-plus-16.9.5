@@ -78,7 +78,7 @@
 
 
 function checkAccess() {
-    fetch("https://fozogt-jpg.github.io/Blooket-cheats-plus-16.9.5/allow.txt", { cache: "no-store" })
+    fetch("https://fozogt-jpg.github.io/Blooket-Cheats-plus-16.9.5/allow.txt", { cache: "no-store" })
         .then(res => {
             if (!res.ok) {
                 throw new Error("Not allowed");
